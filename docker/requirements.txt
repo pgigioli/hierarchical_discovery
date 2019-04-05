@@ -1,0 +1,5 @@
+jupyterlab
+nltk
+xlrd
+gensim
+bcubed
