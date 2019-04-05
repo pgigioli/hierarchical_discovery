@@ -1,0 +1,772 @@
+discrete_loss_weight : 1.0
+vocab_size : 30000
+orthogonality_loss_weight : 0.0
+mse_loss_weight : 0.0
+device : 0
+continuous_loss_weight : 1.0
+val_split : 0.1
+use_cuda : True
+trainable_embeddings : True
+gumbel_temperature : 1.0
+finetune : False
+hierarchies : [6, 6, 6]
+gumbel_loss_weight : 0.0
+debug_mode : False
+max_len : 100
+batch_size : 32
+val_interval : 1000
+rnn_cell : <class 'tensorflow.python.ops.rnn_cell_impl.GRUCell'>
+display_interval : 200
+straight_through : False
+n_epochs : 100
+hidden_size : 128
+dataset : newsgroups
+dropout_keep_prob : 0.5
+use_attn : True
+deploy_interval : 5000
+learning_rate : 0.001
+n_layers : 1
+weights_file : None
+embedding_dim : 100
+[0,     1] train loss: (batch: 6.0037, discrete: 3.0000, continuous: 3.0037, gumbel: 1.8017, orth: 2.2510, mse: 0.0254), discrete acc: 0.0312, continuous acc: 0.093750, grad_norm: 1.3187
+[0,   200] train loss: (batch: 5.7925, discrete: 2.9398, continuous: 2.8526, gumbel: 1.8227, orth: 2.3450, mse: 0.0827), discrete acc: 0.0312, continuous acc: 0.093750, grad_norm: 3.1169
+[1,   400] train loss: (batch: 4.3171, discrete: 2.2646, continuous: 2.0525, gumbel: 2.2973, orth: 2.9363, mse: 0.1852), discrete acc: 0.2188, continuous acc: 0.312500, grad_norm: 3.4370
+[1,   600] train loss: (batch: 3.7406, discrete: 2.0261, continuous: 1.7146, gumbel: 2.5452, orth: 3.0734, mse: 0.2221), discrete acc: 0.2500, continuous acc: 0.437500, grad_norm: 4.9077
+[2,   800] train loss: (batch: 3.1973, discrete: 1.8140, continuous: 1.3833, gumbel: 2.5632, orth: 3.4289, mse: 0.2407), discrete acc: 0.2812, continuous acc: 0.531250, grad_norm: 4.7834
+[3,  1000] train loss: (batch: 2.5398, discrete: 1.5007, continuous: 1.0391, gumbel: 2.6976, orth: 3.7142, mse: 0.2799), discrete acc: 0.3438, continuous acc: 0.562500, grad_norm: 5.0000
+[3,  1200] train loss: (batch: 1.8753, discrete: 1.1302, continuous: 0.7451, gumbel: 2.6928, orth: 3.8105, mse: 0.3067), discrete acc: 0.5938, continuous acc: 0.781250, grad_norm: 3.9775
+[4,  1400] train loss: (batch: 1.3965, discrete: 0.8403, continuous: 0.5562, gumbel: 2.8032, orth: 4.1399, mse: 0.3266), discrete acc: 0.6562, continuous acc: 0.843750, grad_norm: 3.8109
+[5,  1600] train loss: (batch: 1.2697, discrete: 0.7855, continuous: 0.4842, gumbel: 2.7709, orth: 4.3710, mse: 0.3368), discrete acc: 0.7500, continuous acc: 0.875000, grad_norm: 3.3128
+[5,  1800] train loss: (batch: 0.6785, discrete: 0.3991, continuous: 0.2794, gumbel: 2.8530, orth: 4.4959, mse: 0.3697), discrete acc: 0.8750, continuous acc: 0.843750, grad_norm: 4.1331
+[6,  2000] train loss: (batch: 0.7082, discrete: 0.4941, continuous: 0.2142, gumbel: 2.8653, orth: 4.4228, mse: 0.3838), discrete acc: 0.8750, continuous acc: 0.968750, grad_norm: 5.0000
+[6,  2200] train loss: (batch: 0.5831, discrete: 0.3511, continuous: 0.2320, gumbel: 2.8315, orth: 4.4348, mse: 0.3849), discrete acc: 0.9375, continuous acc: 0.906250, grad_norm: 2.1269
+[7,  2400] train loss: (batch: 0.4555, discrete: 0.3321, continuous: 0.1234, gumbel: 2.8394, orth: 4.4913, mse: 0.3660), discrete acc: 0.9062, continuous acc: 0.968750, grad_norm: 2.3559
+[8,  2600] train loss: (batch: 0.3597, discrete: 0.2728, continuous: 0.0869, gumbel: 2.9008, orth: 4.4357, mse: 0.4032), discrete acc: 0.9375, continuous acc: 0.968750, grad_norm: 2.6216
+[8,  2800] train loss: (batch: 0.2476, discrete: 0.1387, continuous: 0.1089, gumbel: 2.8875, orth: 4.5042, mse: 0.3998), discrete acc: 0.9688, continuous acc: 0.968750, grad_norm: 1.7708
+[9,  3000] train loss: (batch: 0.6901, discrete: 0.3854, continuous: 0.3048, gumbel: 2.8819, orth: 4.5262, mse: 0.3769), discrete acc: 0.9375, continuous acc: 0.968750, grad_norm: 5.0000
+[10,  3200] train loss: (batch: 0.3544, discrete: 0.2615, continuous: 0.0929, gumbel: 2.8903, orth: 4.4548, mse: 0.3769), discrete acc: 0.9375, continuous acc: 1.000000, grad_norm: 2.3999
+[10,  3400] train loss: (batch: 0.1694, discrete: 0.1344, continuous: 0.0350, gumbel: 2.9212, orth: 4.5279, mse: 0.4236), discrete acc: 0.9688, continuous acc: 1.000000, grad_norm: 3.2434
+[11,  3600] train loss: (batch: 0.4854, discrete: 0.2504, continuous: 0.2350, gumbel: 2.9341, orth: 4.5555, mse: 0.4041), discrete acc: 0.9375, continuous acc: 0.968750, grad_norm: 3.0497
+[11,  3800] train loss: (batch: 0.1902, discrete: 0.0416, continuous: 0.1486, gumbel: 2.9131, orth: 4.5983, mse: 0.4092), discrete acc: 1.0000, continuous acc: 0.937500, grad_norm: 2.5937
+[12,  4000] train loss: (batch: 0.2760, discrete: 0.0924, continuous: 0.1836, gumbel: 2.9027, orth: 4.6049, mse: 0.4046), discrete acc: 0.9688, continuous acc: 0.937500, grad_norm: 5.0000
+[13,  4200] train loss: (batch: 0.2553, discrete: 0.1757, continuous: 0.0796, gumbel: 2.9364, orth: 4.6744, mse: 0.4107), discrete acc: 0.9688, continuous acc: 0.968750, grad_norm: 4.5630
+[13,  4400] train loss: (batch: 0.0349, discrete: 0.0286, continuous: 0.0062, gumbel: 2.9565, orth: 4.7692, mse: 0.4183), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.3569
+[14,  4600] train loss: (batch: 0.1845, discrete: 0.0310, continuous: 0.1535, gumbel: 2.9493, orth: 4.7522, mse: 0.4311), discrete acc: 1.0000, continuous acc: 0.968750, grad_norm: 3.3536
+[15,  4800] train loss: (batch: 0.0940, discrete: 0.0722, continuous: 0.0217, gumbel: 2.9157, orth: 4.8563, mse: 0.4200), discrete acc: 0.9688, continuous acc: 1.000000, grad_norm: 2.5317
+[15,  5000] train loss: (batch: 0.0866, discrete: 0.0681, continuous: 0.0184, gumbel: 2.9428, orth: 4.8756, mse: 0.4294), discrete acc: 0.9688, continuous acc: 1.000000, grad_norm: 0.9572
+
+Hierarchy #0
+Label Distributions:
+0: [2, 1, 2, 1, 0, 0, 3, 53, 2, 62, 60, 0, 2, 0, 0, 1, 2, 1, 52, 2]
+1: [0, 4, 3, 44, 59, 3, 12, 2, 0, 0, 1, 1, 54, 2, 61, 1, 0, 0, 0, 2]
+2: [58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 47, 1, 31]
+3: [0, 53, 46, 6, 1, 48, 38, 0, 2, 1, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0]
+4: [1, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 52, 4, 1, 0, 59, 56, 0, 2, 4]
+5: [0, 2, 0, 1, 0, 2, 0, 2, 47, 1, 0, 1, 2, 57, 0, 0, 0, 0, 1, 0]
+
+Hierarchy Assignments:
+rec.sport.baseball: [62, 0, 0, 1, 0, 1] ==> 0
+talk.politics.misc: [52, 0, 1, 0, 2, 1] ==> 0
+rec.autos: [53, 2, 0, 0, 0, 2] ==> 0
+rec.sport.hockey: [60, 1, 0, 0, 0, 0] ==> 0
+sci.space: [0, 61, 0, 0, 0, 0] ==> 1
+comp.sys.ibm.pc.hardware: [1, 44, 0, 6, 0, 1] ==> 1
+sci.electronics: [2, 54, 0, 2, 4, 2] ==> 1
+comp.sys.mac.hardware: [0, 59, 0, 1, 0, 0] ==> 1
+alt.atheism: [2, 0, 58, 0, 1, 0] ==> 2
+talk.politics.mideast: [1, 0, 47, 0, 0, 0] ==> 2
+talk.religion.misc: [2, 2, 31, 0, 4, 0] ==> 2
+misc.forsale: [3, 12, 0, 38, 0, 0] ==> 3
+comp.os.ms-windows.misc: [2, 3, 0, 46, 0, 0] ==> 3
+comp.graphics: [1, 4, 0, 53, 0, 2] ==> 3
+comp.windows.x: [0, 3, 0, 48, 4, 2] ==> 3
+talk.politics.guns: [2, 0, 0, 0, 56, 0] ==> 4
+soc.religion.christian: [1, 1, 2, 1, 59, 0] ==> 4
+sci.crypt: [0, 1, 0, 0, 52, 1] ==> 4
+sci.med: [0, 2, 0, 0, 1, 57] ==> 5
+rec.motorcycles: [2, 0, 0, 2, 0, 47] ==> 5
+
+Keywords:
+0: ['edu' 'year' 'com' 'team' 'would']
+1: ['scsi' 'space' 'edu' 'launch' 'drive']
+2: ['god' 'israel' 'people' 'ra' 'edu']
+3: ['ax' 'max' '34u' '75u' 'a86']
+4: ['gun' 'edu' 'people' 'god' 'one']
+5: ['edu' 'com' 'os2' 'os' 'comp']
+
+
+Hierarchy #1
+Label Distributions:
+0: [0, 50, 47, 46, 57, 8, 4, 0, 1, 0, 1, 0, 6, 0, 0, 0, 0, 0, 0, 0]
+1: [1, 5, 1, 2, 2, 1, 4, 1, 1, 0, 0, 1, 52, 1, 0, 3, 0, 0, 0, 2]
+2: [3, 1, 1, 1, 0, 1, 0, 0, 1, 2, 0, 0, 0, 55, 0, 1, 55, 0, 2, 32]
+3: [57, 0, 1, 1, 0, 0, 0, 1, 0, 61, 58, 0, 0, 0, 0, 0, 3, 1, 50, 2]
+4: [0, 1, 0, 2, 1, 0, 45, 55, 48, 1, 2, 0, 5, 2, 0, 1, 0, 0, 2, 0]
+5: [0, 3, 1, 0, 0, 47, 0, 0, 0, 0, 0, 53, 1, 2, 61, 59, 0, 47, 2, 3]
+
+Hierarchy Assignments:
+comp.sys.ibm.pc.hardware: [46, 2, 1, 1, 2, 0] ==> 0
+comp.os.ms-windows.misc: [47, 1, 1, 1, 0, 1] ==> 0
+comp.sys.mac.hardware: [57, 2, 0, 0, 1, 0] ==> 0
+comp.graphics: [50, 5, 1, 0, 1, 3] ==> 0
+sci.electronics: [6, 52, 0, 0, 5, 1] ==> 1
+sci.med: [0, 1, 55, 0, 2, 2] ==> 2
+talk.politics.guns: [0, 0, 55, 3, 0, 0] ==> 2
+talk.religion.misc: [0, 2, 32, 2, 0, 3] ==> 2
+rec.sport.baseball: [0, 0, 2, 61, 1, 0] ==> 3
+talk.politics.misc: [0, 0, 2, 50, 2, 2] ==> 3
+alt.atheism: [0, 1, 3, 57, 0, 0] ==> 3
+rec.sport.hockey: [1, 0, 0, 58, 2, 0] ==> 3
+misc.forsale: [4, 4, 0, 0, 45, 0] ==> 4
+rec.motorcycles: [1, 1, 1, 0, 48, 0] ==> 4
+rec.autos: [0, 1, 0, 1, 55, 0] ==> 4
+sci.space: [0, 0, 0, 0, 0, 61] ==> 5
+talk.politics.mideast: [0, 0, 0, 1, 0, 47] ==> 5
+soc.religion.christian: [0, 3, 1, 0, 1, 59] ==> 5
+sci.crypt: [0, 1, 0, 0, 0, 53] ==> 5
+comp.windows.x: [8, 1, 1, 0, 0, 47] ==> 5
+
+Keywords:
+0: ['ax' 'max' '34u' '75u' 'a86']
+1: ['scope' 'edu' 'com' 'dtmedin' 'catbyte']
+2: ['gun' 'edu' 'com' 'ra' 'people']
+3: ['edu' 'year' 'team' 'would' 'com']
+4: ['car' 'edu' 'com' 'sale' 'like']
+5: ['edu' 'space' 'launch' 'people' 'one']
+
+
+Hierarchy #2
+Label Distributions:
+0: [0, 5, 2, 4, 53, 49, 1, 1, 0, 0, 1, 0, 1, 1, 33, 0, 0, 0, 0, 0]
+1: [5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 60, 0, 47, 1, 35]
+2: [0, 4, 1, 3, 1, 2, 1, 1, 2, 0, 0, 53, 52, 58, 28, 1, 0, 0, 2, 1]
+3: [0, 3, 47, 44, 6, 4, 51, 53, 3, 0, 59, 0, 10, 0, 0, 1, 0, 0, 1, 0]
+4: [0, 47, 1, 1, 0, 2, 0, 1, 0, 63, 0, 0, 0, 0, 0, 2, 57, 0, 3, 3]
+5: [56, 1, 0, 0, 0, 0, 0, 1, 46, 1, 1, 0, 1, 1, 0, 0, 1, 1, 49, 0]
+
+Hierarchy Assignments:
+sci.space: [33, 0, 28, 0, 0, 0] ==> 0
+comp.sys.mac.hardware: [53, 0, 1, 6, 0, 0] ==> 0
+comp.windows.x: [49, 0, 2, 4, 2, 0] ==> 0
+talk.politics.mideast: [0, 47, 0, 0, 0, 1] ==> 1
+talk.religion.misc: [0, 35, 1, 0, 3, 0] ==> 1
+soc.religion.christian: [0, 60, 1, 1, 2, 0] ==> 1
+sci.med: [1, 0, 58, 0, 0, 1] ==> 2
+sci.electronics: [1, 0, 52, 10, 0, 1] ==> 2
+sci.crypt: [0, 1, 53, 0, 0, 0] ==> 2
+misc.forsale: [1, 0, 1, 51, 0, 0] ==> 3
+comp.sys.ibm.pc.hardware: [4, 0, 3, 44, 1, 0] ==> 3
+comp.os.ms-windows.misc: [2, 0, 1, 47, 1, 0] ==> 3
+rec.autos: [1, 0, 1, 53, 1, 1] ==> 3
+rec.sport.hockey: [1, 0, 0, 59, 0, 1] ==> 3
+rec.sport.baseball: [0, 0, 0, 0, 63, 1] ==> 4
+talk.politics.guns: [0, 0, 0, 0, 57, 1] ==> 4
+comp.graphics: [5, 0, 4, 3, 47, 1] ==> 4
+talk.politics.misc: [0, 1, 2, 1, 3, 49] ==> 5
+alt.atheism: [0, 5, 0, 0, 0, 56] ==> 5
+rec.motorcycles: [0, 0, 2, 3, 0, 46] ==> 5
+
+Keywords:
+0: ['launch' 'space' 'edu' 'satellite' 'window']
+1: ['god' 'israel' 'people' 'one' 'ra']
+2: ['edu' 'com' 'privacy' 'information' 'one']
+3: ['ax' 'max' '34u' '75u' 'a86']
+4: ['gun' 'edu' '___' 'crime' 'year']
+5: ['edu' 'com' 'insurance' 'health' 'writes']
+
+[16,  5200] train loss: (batch: 0.0231, discrete: 0.0159, continuous: 0.0073, gumbel: 2.9587, orth: 4.9179, mse: 0.4420), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1090
+[16,  5400] train loss: (batch: 0.0181, discrete: 0.0139, continuous: 0.0042, gumbel: 2.9546, orth: 4.8423, mse: 0.4207), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0617
+[17,  5600] train loss: (batch: 0.0343, discrete: 0.0140, continuous: 0.0203, gumbel: 2.9778, orth: 4.8476, mse: 0.4404), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.2909
+[18,  5800] train loss: (batch: 0.1068, discrete: 0.0161, continuous: 0.0908, gumbel: 2.9461, orth: 4.8000, mse: 0.4596), discrete acc: 1.0000, continuous acc: 0.968750, grad_norm: 1.2033
+[18,  6000] train loss: (batch: 0.3631, discrete: 0.3570, continuous: 0.0061, gumbel: 2.9618, orth: 4.8593, mse: 0.3971), discrete acc: 0.9375, continuous acc: 1.000000, grad_norm: 3.5276
+[19,  6200] train loss: (batch: 0.2927, discrete: 0.2568, continuous: 0.0360, gumbel: 2.9370, orth: 4.9091, mse: 0.4458), discrete acc: 0.9688, continuous acc: 0.968750, grad_norm: 3.5281
+[20,  6400] train loss: (batch: 0.0253, discrete: 0.0147, continuous: 0.0105, gumbel: 2.9449, orth: 4.9528, mse: 0.4227), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1928
+[20,  6600] train loss: (batch: 0.0192, discrete: 0.0095, continuous: 0.0096, gumbel: 2.9716, orth: 4.9471, mse: 0.4382), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1257
+[21,  6800] train loss: (batch: 0.0654, discrete: 0.0583, continuous: 0.0072, gumbel: 2.9475, orth: 4.8400, mse: 0.4647), discrete acc: 0.9688, continuous acc: 1.000000, grad_norm: 0.8593
+[21,  7000] train loss: (batch: 0.0876, discrete: 0.0784, continuous: 0.0092, gumbel: 2.9426, orth: 4.8440, mse: 0.4414), discrete acc: 0.9375, continuous acc: 1.000000, grad_norm: 2.6129
+[22,  7200] train loss: (batch: 0.0203, discrete: 0.0109, continuous: 0.0094, gumbel: 2.9483, orth: 4.8461, mse: 0.4151), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1737
+[23,  7400] train loss: (batch: 0.0394, discrete: 0.0317, continuous: 0.0077, gumbel: 2.9381, orth: 4.6940, mse: 0.4406), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.8700
+[23,  7600] train loss: (batch: 0.0328, discrete: 0.0078, continuous: 0.0251, gumbel: 2.9458, orth: 4.7206, mse: 0.4075), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.4758
+[24,  7800] train loss: (batch: 0.1963, discrete: 0.1822, continuous: 0.0140, gumbel: 2.9597, orth: 4.7203, mse: 0.4248), discrete acc: 0.9688, continuous acc: 1.000000, grad_norm: 5.0000
+[25,  8000] train loss: (batch: 0.0168, discrete: 0.0082, continuous: 0.0086, gumbel: 2.9298, orth: 4.6906, mse: 0.4583), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.2384
+[25,  8200] train loss: (batch: 0.0155, discrete: 0.0065, continuous: 0.0090, gumbel: 2.9699, orth: 4.7580, mse: 0.4495), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1439
+[26,  8400] train loss: (batch: 0.0117, discrete: 0.0085, continuous: 0.0032, gumbel: 2.9774, orth: 4.6476, mse: 0.4759), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0516
+[26,  8600] train loss: (batch: 0.0116, discrete: 0.0092, continuous: 0.0024, gumbel: 2.9746, orth: 4.7172, mse: 0.4603), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0326
+[27,  8800] train loss: (batch: 0.0099, discrete: 0.0053, continuous: 0.0045, gumbel: 2.9770, orth: 4.7254, mse: 0.4411), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0786
+[28,  9000] train loss: (batch: 0.0165, discrete: 0.0074, continuous: 0.0092, gumbel: 2.9720, orth: 4.7030, mse: 0.4145), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1168
+[28,  9200] train loss: (batch: 0.0087, discrete: 0.0051, continuous: 0.0036, gumbel: 2.9798, orth: 4.7369, mse: 0.4800), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0683
+[29,  9400] train loss: (batch: 0.0675, discrete: 0.0062, continuous: 0.0612, gumbel: 2.9470, orth: 4.7344, mse: 0.4316), discrete acc: 1.0000, continuous acc: 0.968750, grad_norm: 1.9699
+[30,  9600] train loss: (batch: 0.0104, discrete: 0.0061, continuous: 0.0043, gumbel: 2.9653, orth: 4.7348, mse: 0.4454), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0549
+[30,  9800] train loss: (batch: 0.0077, discrete: 0.0055, continuous: 0.0022, gumbel: 2.9689, orth: 4.6651, mse: 0.4146), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0212
+[31, 10000] train loss: (batch: 0.0076, discrete: 0.0049, continuous: 0.0027, gumbel: 2.9611, orth: 4.7128, mse: 0.4572), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0417
+
+Hierarchy #0
+Label Distributions:
+0: [0, 2, 0, 2, 0, 0, 6, 50, 2, 63, 61, 0, 3, 0, 0, 2, 1, 0, 53, 2]
+1: [1, 4, 3, 45, 58, 3, 7, 4, 1, 0, 0, 2, 56, 2, 61, 3, 0, 0, 0, 1]
+2: [60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 48, 1, 35]
+3: [0, 51, 48, 4, 2, 54, 40, 2, 2, 0, 0, 0, 4, 1, 0, 1, 0, 0, 0, 0]
+4: [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 51, 1, 1, 0, 55, 57, 0, 1, 1]
+5: [0, 2, 0, 1, 0, 0, 0, 1, 46, 1, 0, 1, 0, 56, 0, 0, 0, 0, 1, 0]
+
+Hierarchy Assignments:
+rec.sport.baseball: [63, 0, 0, 0, 0, 1] ==> 0
+talk.politics.misc: [53, 0, 1, 0, 1, 1] ==> 0
+rec.autos: [50, 4, 0, 2, 0, 1] ==> 0
+rec.sport.hockey: [61, 0, 0, 0, 0, 0] ==> 0
+sci.space: [0, 61, 0, 0, 0, 0] ==> 1
+comp.sys.ibm.pc.hardware: [2, 45, 0, 4, 0, 1] ==> 1
+sci.electronics: [3, 56, 0, 4, 1, 0] ==> 1
+comp.sys.mac.hardware: [0, 58, 0, 2, 0, 0] ==> 1
+alt.atheism: [0, 1, 60, 0, 0, 0] ==> 2
+talk.politics.mideast: [0, 0, 48, 0, 0, 0] ==> 2
+talk.religion.misc: [2, 1, 35, 0, 1, 0] ==> 2
+misc.forsale: [6, 7, 0, 40, 0, 0] ==> 3
+comp.os.ms-windows.misc: [0, 3, 0, 48, 0, 0] ==> 3
+comp.graphics: [2, 4, 0, 51, 1, 2] ==> 3
+comp.windows.x: [0, 3, 0, 54, 0, 0] ==> 3
+talk.politics.guns: [1, 0, 0, 0, 57, 0] ==> 4
+soc.religion.christian: [2, 3, 3, 1, 55, 0] ==> 4
+sci.crypt: [0, 2, 0, 0, 51, 1] ==> 4
+sci.med: [0, 2, 0, 1, 1, 56] ==> 5
+rec.motorcycles: [2, 1, 0, 2, 0, 46] ==> 5
+
+Keywords:
+0: ['edu' 'com' 'year' 'team' 'car']
+1: ['scsi' 'space' 'launch' 'edu' 'drive']
+2: ['god' 'israel' 'people' 'edu' 'ra']
+3: ['ax' 'max' '34u' '75u' 'a86']
+4: ['gun' 'edu' 'people' 'privacy' 'god']
+5: ['edu' 'com' 'b6' 'bike' 'one']
+
+
+Hierarchy #1
+Label Distributions:
+0: [0, 51, 49, 43, 57, 7, 3, 2, 0, 0, 0, 0, 5, 0, 0, 2, 0, 0, 0, 1]
+1: [1, 1, 0, 4, 0, 1, 0, 0, 0, 0, 0, 0, 51, 1, 1, 7, 0, 0, 0, 0]
+2: [2, 2, 0, 0, 0, 2, 0, 1, 1, 0, 0, 1, 0, 54, 0, 2, 55, 0, 2, 34]
+3: [58, 3, 0, 1, 0, 1, 3, 0, 1, 63, 61, 0, 1, 0, 0, 1, 3, 2, 52, 3]
+4: [0, 1, 0, 3, 3, 0, 46, 54, 49, 1, 0, 0, 6, 2, 0, 1, 0, 0, 1, 0]
+5: [0, 2, 2, 1, 0, 46, 1, 0, 0, 0, 0, 53, 1, 3, 60, 51, 0, 46, 1, 1]
+
+Hierarchy Assignments:
+comp.sys.ibm.pc.hardware: [43, 4, 0, 1, 3, 1] ==> 0
+comp.os.ms-windows.misc: [49, 0, 0, 0, 0, 2] ==> 0
+comp.sys.mac.hardware: [57, 0, 0, 0, 3, 0] ==> 0
+comp.graphics: [51, 1, 2, 3, 1, 2] ==> 0
+sci.electronics: [5, 51, 0, 1, 6, 1] ==> 1
+sci.med: [0, 1, 54, 0, 2, 3] ==> 2
+talk.politics.guns: [0, 0, 55, 3, 0, 0] ==> 2
+talk.religion.misc: [1, 0, 34, 3, 0, 1] ==> 2
+rec.sport.baseball: [0, 0, 0, 63, 1, 0] ==> 3
+talk.politics.misc: [0, 0, 2, 52, 1, 1] ==> 3
+alt.atheism: [0, 1, 2, 58, 0, 0] ==> 3
+rec.sport.hockey: [0, 0, 0, 61, 0, 0] ==> 3
+misc.forsale: [3, 0, 0, 3, 46, 1] ==> 4
+rec.motorcycles: [0, 0, 1, 1, 49, 0] ==> 4
+rec.autos: [2, 0, 1, 0, 54, 0] ==> 4
+sci.space: [0, 1, 0, 0, 0, 60] ==> 5
+talk.politics.mideast: [0, 0, 0, 2, 0, 46] ==> 5
+soc.religion.christian: [2, 7, 2, 1, 1, 51] ==> 5
+sci.crypt: [0, 0, 1, 0, 0, 53] ==> 5
+comp.windows.x: [7, 1, 2, 1, 0, 46] ==> 5
+
+Keywords:
+0: ['ax' 'max' '34u' '75u' 'a86']
+1: ['scope' 'edu' 'dtmedin' 'catbyte' 'use']
+2: ['gun' 'edu' 'ra' 'people' 'crime']
+3: ['edu' 'com' 'year' 'team' 'would']
+4: ['car' 'edu' 'com' 'sale' 'like']
+5: ['edu' 'space' 'launch' 'people' 'israel']
+
+
+Hierarchy #2
+Label Distributions:
+0: [0, 4, 2, 3, 54, 49, 1, 2, 0, 0, 0, 0, 2, 1, 1, 2, 0, 0, 0, 0]
+1: [2, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 59, 0, 46, 1, 34]
+2: [1, 4, 1, 3, 0, 2, 1, 1, 3, 1, 0, 53, 51, 57, 60, 1, 0, 0, 0, 0]
+3: [0, 2, 47, 44, 6, 5, 50, 52, 2, 0, 57, 0, 10, 2, 0, 1, 0, 0, 1, 1]
+4: [0, 48, 1, 2, 0, 1, 1, 0, 0, 63, 3, 0, 1, 0, 0, 1, 57, 0, 5, 2]
+5: [58, 1, 0, 0, 0, 0, 0, 2, 46, 0, 1, 0, 0, 0, 0, 0, 1, 2, 49, 2]
+
+Hierarchy Assignments:
+comp.sys.mac.hardware: [54, 0, 0, 6, 0, 0] ==> 0
+comp.windows.x: [49, 0, 2, 5, 1, 0] ==> 0
+talk.politics.mideast: [0, 46, 0, 0, 0, 2] ==> 1
+talk.religion.misc: [0, 34, 0, 1, 2, 2] ==> 1
+soc.religion.christian: [2, 59, 1, 1, 1, 0] ==> 1
+sci.med: [1, 0, 57, 2, 0, 0] ==> 2
+sci.space: [1, 0, 60, 0, 0, 0] ==> 2
+sci.electronics: [2, 0, 51, 10, 1, 0] ==> 2
+sci.crypt: [0, 1, 53, 0, 0, 0] ==> 2
+misc.forsale: [1, 0, 1, 50, 1, 0] ==> 3
+comp.sys.ibm.pc.hardware: [3, 0, 3, 44, 2, 0] ==> 3
+comp.os.ms-windows.misc: [2, 0, 1, 47, 1, 0] ==> 3
+rec.autos: [2, 0, 1, 52, 0, 2] ==> 3
+rec.sport.hockey: [0, 0, 0, 57, 3, 1] ==> 3
+rec.sport.baseball: [0, 0, 1, 0, 63, 0] ==> 4
+talk.politics.guns: [0, 0, 0, 0, 57, 1] ==> 4
+comp.graphics: [4, 1, 4, 2, 48, 1] ==> 4
+talk.politics.misc: [0, 1, 0, 1, 5, 49] ==> 5
+alt.atheism: [0, 2, 1, 0, 0, 58] ==> 5
+rec.motorcycles: [0, 0, 3, 2, 0, 46] ==> 5
+
+Keywords:
+0: ['window' 'edu' 'apple' 'mac' 'com']
+1: ['god' 'israel' 'people' 'ra' 'one']
+2: ['edu' 'space' 'launch' 'com' 'one']
+3: ['ax' 'max' '34u' '75u' 'a86']
+4: ['gun' 'edu' '___' 'com' 'year']
+5: ['edu' 'com' 'moral' 'insurance' 'keith']
+
+[31, 10200] train loss: (batch: 0.0053, discrete: 0.0045, continuous: 0.0008, gumbel: 2.9777, orth: 4.7624, mse: 0.4553), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0138
+[32, 10400] train loss: (batch: 0.0048, discrete: 0.0042, continuous: 0.0006, gumbel: 2.9769, orth: 4.7835, mse: 0.4737), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0135
+[33, 10600] train loss: (batch: 0.0121, discrete: 0.0070, continuous: 0.0051, gumbel: 2.9693, orth: 4.7821, mse: 0.4464), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.6312
+[33, 10800] train loss: (batch: 0.0773, discrete: 0.0728, continuous: 0.0045, gumbel: 2.9768, orth: 4.7455, mse: 0.4829), discrete acc: 0.9688, continuous acc: 1.000000, grad_norm: 2.9427
+[34, 11000] train loss: (batch: 0.0247, discrete: 0.0051, continuous: 0.0196, gumbel: 2.9572, orth: 4.7972, mse: 0.4654), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 2.5279
+[35, 11200] train loss: (batch: 0.0613, discrete: 0.0566, continuous: 0.0048, gumbel: 2.9672, orth: 4.8172, mse: 0.4543), discrete acc: 0.9688, continuous acc: 1.000000, grad_norm: 1.5380
+[35, 11400] train loss: (batch: 0.0308, discrete: 0.0078, continuous: 0.0230, gumbel: 2.9746, orth: 4.8468, mse: 0.4192), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.3417
+[36, 11600] train loss: (batch: 0.0176, discrete: 0.0057, continuous: 0.0119, gumbel: 2.9744, orth: 4.7552, mse: 0.4412), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1968
+[36, 11800] train loss: (batch: 0.0076, discrete: 0.0056, continuous: 0.0019, gumbel: 2.9789, orth: 4.7356, mse: 0.4494), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0436
+[37, 12000] train loss: (batch: 0.0068, discrete: 0.0037, continuous: 0.0032, gumbel: 2.9622, orth: 4.7104, mse: 0.4712), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0660
+[38, 12200] train loss: (batch: 0.0109, discrete: 0.0032, continuous: 0.0077, gumbel: 2.9695, orth: 4.7451, mse: 0.4726), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1688
+[38, 12400] train loss: (batch: 0.0080, discrete: 0.0036, continuous: 0.0044, gumbel: 2.9761, orth: 4.8146, mse: 0.4523), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0845
+[39, 12600] train loss: (batch: 0.0037, discrete: 0.0032, continuous: 0.0005, gumbel: 2.9792, orth: 4.8585, mse: 0.4611), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0122
+[40, 12800] train loss: (batch: 0.0071, discrete: 0.0031, continuous: 0.0040, gumbel: 2.9662, orth: 4.8530, mse: 0.4556), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.3121
+[40, 13000] train loss: (batch: 0.0080, discrete: 0.0064, continuous: 0.0016, gumbel: 2.9741, orth: 4.8399, mse: 0.4459), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1207
+[41, 13200] train loss: (batch: 0.0036, discrete: 0.0029, continuous: 0.0007, gumbel: 2.9789, orth: 4.7532, mse: 0.4515), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0167
+[42, 13400] train loss: (batch: 0.0710, discrete: 0.0034, continuous: 0.0676, gumbel: 2.9642, orth: 4.7801, mse: 0.4346), discrete acc: 1.0000, continuous acc: 0.968750, grad_norm: 5.0000
+[42, 13600] train loss: (batch: 0.0055, discrete: 0.0032, continuous: 0.0023, gumbel: 2.9683, orth: 4.7361, mse: 0.4583), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0322
+[43, 13800] train loss: (batch: 0.0160, discrete: 0.0069, continuous: 0.0091, gumbel: 2.9561, orth: 4.7181, mse: 0.4651), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1582
+[43, 14000] train loss: (batch: 0.0055, discrete: 0.0042, continuous: 0.0013, gumbel: 2.9771, orth: 4.7106, mse: 0.4952), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0883
+[44, 14200] train loss: (batch: 0.0072, discrete: 0.0040, continuous: 0.0032, gumbel: 2.9711, orth: 4.6520, mse: 0.4573), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0513
+[45, 14400] train loss: (batch: 0.0047, discrete: 0.0037, continuous: 0.0009, gumbel: 2.9728, orth: 4.6667, mse: 0.4653), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0225
+[45, 14600] train loss: (batch: 0.0114, discrete: 0.0039, continuous: 0.0075, gumbel: 2.9774, orth: 4.6931, mse: 0.4703), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1337
+[46, 14800] train loss: (batch: 0.0042, discrete: 0.0032, continuous: 0.0010, gumbel: 2.9858, orth: 4.7108, mse: 0.5084), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0195
+[47, 15000] train loss: (batch: 0.0047, discrete: 0.0025, continuous: 0.0022, gumbel: 2.9815, orth: 4.7760, mse: 0.4567), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0278
+
+Hierarchy #0
+Label Distributions:
+0: [0, 1, 0, 0, 0, 0, 4, 53, 2, 63, 59, 0, 3, 1, 0, 1, 2, 0, 51, 1]
+1: [0, 2, 2, 44, 58, 3, 5, 2, 0, 0, 0, 1, 56, 2, 61, 2, 0, 0, 0, 1]
+2: [60, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 48, 1, 35]
+3: [0, 51, 49, 7, 2, 54, 43, 0, 2, 0, 1, 0, 4, 0, 0, 1, 0, 0, 0, 0]
+4: [1, 3, 0, 0, 0, 0, 1, 0, 0, 0, 1, 53, 1, 1, 0, 56, 55, 0, 4, 2]
+5: [0, 1, 0, 1, 0, 0, 0, 2, 47, 1, 0, 0, 0, 56, 0, 0, 0, 0, 0, 0]
+
+Hierarchy Assignments:
+rec.sport.baseball: [63, 0, 0, 0, 0, 1] ==> 0
+talk.politics.misc: [51, 0, 1, 0, 4, 0] ==> 0
+rec.autos: [53, 2, 0, 0, 0, 2] ==> 0
+rec.sport.hockey: [59, 0, 0, 1, 1, 0] ==> 0
+sci.space: [0, 61, 0, 0, 0, 0] ==> 1
+comp.sys.ibm.pc.hardware: [0, 44, 0, 7, 0, 1] ==> 1
+sci.electronics: [3, 56, 0, 4, 1, 0] ==> 1
+comp.sys.mac.hardware: [0, 58, 0, 2, 0, 0] ==> 1
+alt.atheism: [0, 0, 60, 0, 1, 0] ==> 2
+talk.politics.mideast: [0, 0, 48, 0, 0, 0] ==> 2
+talk.religion.misc: [1, 1, 35, 0, 2, 0] ==> 2
+misc.forsale: [4, 5, 0, 43, 1, 0] ==> 3
+comp.os.ms-windows.misc: [0, 2, 0, 49, 0, 0] ==> 3
+comp.graphics: [1, 2, 2, 51, 3, 1] ==> 3
+comp.windows.x: [0, 3, 0, 54, 0, 0] ==> 3
+talk.politics.guns: [2, 0, 1, 0, 55, 0] ==> 4
+soc.religion.christian: [1, 2, 4, 1, 56, 0] ==> 4
+sci.crypt: [0, 1, 0, 0, 53, 0] ==> 4
+sci.med: [1, 2, 0, 0, 1, 56] ==> 5
+rec.motorcycles: [2, 0, 0, 2, 0, 47] ==> 5
+
+Keywords:
+0: ['edu' 'year' 'team' 'com' 'car']
+1: ['scsi' 'space' 'launch' 'edu' 'mac']
+2: ['god' 'israel' 'people' 'edu' 'ra']
+3: ['ax' 'max' '34u' '75u' 'a86']
+4: ['gun' 'edu' 'people' 'god' 'would']
+5: ['edu' 'com' 'os2' 'os' 'comp']
+
+
+Hierarchy #1
+Label Distributions:
+0: [0, 49, 46, 46, 59, 8, 6, 1, 0, 0, 1, 0, 6, 0, 1, 0, 0, 0, 0, 0]
+1: [1, 3, 1, 3, 0, 1, 0, 1, 1, 1, 0, 0, 51, 2, 0, 7, 1, 0, 1, 0]
+2: [3, 4, 1, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 57, 0, 2, 56, 0, 1, 36]
+3: [57, 0, 0, 0, 0, 0, 1, 0, 0, 63, 58, 0, 0, 0, 0, 0, 1, 0, 50, 1]
+4: [0, 1, 0, 1, 1, 0, 44, 54, 50, 0, 1, 0, 6, 0, 0, 1, 0, 0, 1, 1]
+5: [0, 3, 3, 1, 0, 48, 1, 0, 0, 0, 1, 53, 1, 1, 60, 54, 0, 48, 3, 1]
+
+Hierarchy Assignments:
+comp.sys.ibm.pc.hardware: [46, 3, 1, 0, 1, 1] ==> 0
+comp.os.ms-windows.misc: [46, 1, 1, 0, 0, 3] ==> 0
+comp.sys.mac.hardware: [59, 0, 0, 0, 1, 0] ==> 0
+comp.graphics: [49, 3, 4, 0, 1, 3] ==> 0
+sci.electronics: [6, 51, 0, 0, 6, 1] ==> 1
+sci.med: [0, 2, 57, 0, 0, 1] ==> 2
+talk.politics.guns: [0, 1, 56, 1, 0, 0] ==> 2
+talk.religion.misc: [0, 0, 36, 1, 1, 1] ==> 2
+rec.sport.baseball: [0, 1, 0, 63, 0, 0] ==> 3
+talk.politics.misc: [0, 1, 1, 50, 1, 3] ==> 3
+alt.atheism: [0, 1, 3, 57, 0, 0] ==> 3
+rec.sport.hockey: [1, 0, 0, 58, 1, 1] ==> 3
+misc.forsale: [6, 0, 1, 1, 44, 1] ==> 4
+rec.motorcycles: [0, 1, 0, 0, 50, 0] ==> 4
+rec.autos: [1, 1, 1, 0, 54, 0] ==> 4
+sci.space: [1, 0, 0, 0, 0, 60] ==> 5
+talk.politics.mideast: [0, 0, 0, 0, 0, 48] ==> 5
+soc.religion.christian: [0, 7, 2, 0, 1, 54] ==> 5
+sci.crypt: [0, 0, 1, 0, 0, 53] ==> 5
+comp.windows.x: [8, 1, 0, 0, 0, 48] ==> 5
+
+Keywords:
+0: ['ax' 'max' '34u' '75u' 'a86']
+1: ['scope' 'edu' 'data' 'catbyte' 'dtmedin']
+2: ['gun' 'edu' 'com' 'people' 'ra']
+3: ['edu' 'year' 'team' 'would' 'com']
+4: ['car' 'edu' 'com' 'sale' 'one']
+5: ['edu' 'space' 'launch' 'people' 'would']
+
+
+Hierarchy #2
+Label Distributions:
+0: [0, 2, 3, 0, 54, 47, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0]
+1: [4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 61, 1, 48, 1, 36]
+2: [0, 3, 1, 4, 0, 3, 1, 1, 1, 1, 1, 54, 50, 57, 61, 1, 0, 0, 2, 0]
+3: [0, 3, 46, 46, 6, 4, 50, 53, 2, 1, 57, 0, 12, 1, 0, 0, 0, 0, 1, 1]
+4: [0, 49, 1, 2, 0, 3, 1, 2, 0, 62, 2, 0, 0, 2, 0, 1, 56, 0, 4, 2]
+5: [57, 0, 0, 0, 0, 0, 0, 1, 48, 0, 1, 0, 0, 0, 0, 0, 1, 0, 48, 0]
+
+Hierarchy Assignments:
+comp.sys.mac.hardware: [54, 0, 0, 6, 0, 0] ==> 0
+comp.windows.x: [47, 0, 3, 4, 3, 0] ==> 0
+talk.politics.mideast: [0, 48, 0, 0, 0, 0] ==> 1
+talk.religion.misc: [0, 36, 0, 1, 2, 0] ==> 1
+soc.religion.christian: [1, 61, 1, 0, 1, 0] ==> 1
+sci.med: [0, 0, 57, 1, 2, 0] ==> 2
+sci.space: [0, 0, 61, 0, 0, 0] ==> 2
+sci.electronics: [1, 1, 50, 12, 0, 0] ==> 2
+sci.crypt: [0, 0, 54, 0, 0, 0] ==> 2
+misc.forsale: [1, 0, 1, 50, 1, 0] ==> 3
+comp.sys.ibm.pc.hardware: [0, 0, 4, 46, 2, 0] ==> 3
+comp.os.ms-windows.misc: [3, 0, 1, 46, 1, 0] ==> 3
+rec.autos: [0, 0, 1, 53, 2, 1] ==> 3
+rec.sport.hockey: [0, 0, 1, 57, 2, 1] ==> 3
+rec.sport.baseball: [0, 0, 1, 1, 62, 0] ==> 4
+talk.politics.guns: [0, 1, 0, 0, 56, 1] ==> 4
+comp.graphics: [2, 3, 3, 3, 49, 0] ==> 4
+talk.politics.misc: [0, 1, 2, 1, 4, 48] ==> 5
+alt.atheism: [0, 4, 0, 0, 0, 57] ==> 5
+rec.motorcycles: [0, 0, 1, 2, 0, 48] ==> 5
+
+Keywords:
+0: ['window' 'edu' 'apple' 'mac' 'com']
+1: ['god' 'people' 'israel' 'one' 'ra']
+2: ['edu' 'space' 'launch' 'com' 'information']
+3: ['ax' 'max' '34u' '75u' 'a86']
+4: ['gun' 'edu' '___' 'crime' 'year']
+5: ['edu' 'com' 'insurance' 'keith' 'writes']
+
+[47, 15200] train loss: (batch: 0.0086, discrete: 0.0030, continuous: 0.0056, gumbel: 2.9848, orth: 4.8170, mse: 0.4615), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1245
+[48, 15400] train loss: (batch: 0.0054, discrete: 0.0039, continuous: 0.0015, gumbel: 2.9645, orth: 4.8403, mse: 0.4907), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0351
+[48, 15600] train loss: (batch: 0.0110, discrete: 0.0030, continuous: 0.0080, gumbel: 2.9500, orth: 4.8926, mse: 0.4935), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 1.2586
+[49, 15800] train loss: (batch: 0.0030, discrete: 0.0027, continuous: 0.0003, gumbel: 2.9825, orth: 4.8487, mse: 0.4743), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0072
+[50, 16000] train loss: (batch: 0.0037, discrete: 0.0029, continuous: 0.0008, gumbel: 2.9696, orth: 4.8354, mse: 0.4910), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0131
+[50, 16200] train loss: (batch: 0.0045, discrete: 0.0031, continuous: 0.0014, gumbel: 2.9911, orth: 4.8278, mse: 0.5148), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0280
+[51, 16400] train loss: (batch: 0.0036, discrete: 0.0033, continuous: 0.0003, gumbel: 2.9728, orth: 4.8432, mse: 0.5264), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0150
+[52, 16600] train loss: (batch: 0.1679, discrete: 0.1659, continuous: 0.0020, gumbel: 2.9770, orth: 4.7803, mse: 0.4956), discrete acc: 0.9688, continuous acc: 1.000000, grad_norm: 4.9237
+[52, 16800] train loss: (batch: 0.0107, discrete: 0.0028, continuous: 0.0079, gumbel: 2.9857, orth: 4.8556, mse: 0.4810), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1693
+[53, 17000] train loss: (batch: 0.2474, discrete: 0.0131, continuous: 0.2343, gumbel: 2.9446, orth: 4.8698, mse: 0.4720), discrete acc: 1.0000, continuous acc: 0.968750, grad_norm: 3.3135
+[53, 17200] train loss: (batch: 0.2970, discrete: 0.2403, continuous: 0.0567, gumbel: 2.9604, orth: 4.8884, mse: 0.4566), discrete acc: 0.9375, continuous acc: 0.968750, grad_norm: 2.7621
+[54, 17400] train loss: (batch: 0.0361, discrete: 0.0243, continuous: 0.0118, gumbel: 2.9723, orth: 4.9435, mse: 0.4773), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.5629
+[55, 17600] train loss: (batch: 0.0095, discrete: 0.0035, continuous: 0.0060, gumbel: 2.9635, orth: 4.8353, mse: 0.4544), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1012
+[55, 17800] train loss: (batch: 0.0047, discrete: 0.0030, continuous: 0.0017, gumbel: 2.9804, orth: 4.9380, mse: 0.4723), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0416
+[56, 18000] train loss: (batch: 0.0051, discrete: 0.0029, continuous: 0.0022, gumbel: 2.9800, orth: 4.9013, mse: 0.4815), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0279
+[57, 18200] train loss: (batch: 0.0053, discrete: 0.0019, continuous: 0.0033, gumbel: 2.9778, orth: 4.9417, mse: 0.4841), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0755
+[57, 18400] train loss: (batch: 0.0022, discrete: 0.0015, continuous: 0.0006, gumbel: 2.9922, orth: 4.8998, mse: 0.4900), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0110
+[58, 18600] train loss: (batch: 0.0037, discrete: 0.0016, continuous: 0.0020, gumbel: 2.9843, orth: 4.9021, mse: 0.5396), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0497
+[58, 18800] train loss: (batch: 0.0132, discrete: 0.0039, continuous: 0.0094, gumbel: 2.9610, orth: 4.8750, mse: 0.4857), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.1375
+[59, 19000] train loss: (batch: 0.0034, discrete: 0.0022, continuous: 0.0012, gumbel: 2.9856, orth: 4.9003, mse: 0.5048), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0257
+[60, 19200] train loss: (batch: 0.0046, discrete: 0.0019, continuous: 0.0026, gumbel: 2.9666, orth: 4.9001, mse: 0.5260), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0965
+[60, 19400] train loss: (batch: 0.0029, discrete: 0.0020, continuous: 0.0009, gumbel: 2.9889, orth: 4.8670, mse: 0.5082), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0377
+[61, 19600] train loss: (batch: 0.0033, discrete: 0.0016, continuous: 0.0017, gumbel: 2.9776, orth: 4.8677, mse: 0.4871), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0359
+[62, 19800] train loss: (batch: 0.0101, discrete: 0.0016, continuous: 0.0084, gumbel: 2.9781, orth: 4.9285, mse: 0.4726), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.2700
+[62, 20000] train loss: (batch: 0.0022, discrete: 0.0019, continuous: 0.0003, gumbel: 2.9713, orth: 4.8876, mse: 0.5183), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0101
+
+Hierarchy #0
+Label Distributions:
+0: [0, 0, 0, 1, 0, 0, 4, 51, 1, 63, 59, 0, 2, 1, 0, 0, 2, 0, 49, 2]
+1: [0, 3, 3, 45, 58, 3, 4, 2, 1, 0, 2, 1, 57, 4, 61, 1, 1, 0, 0, 1]
+2: [59, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 1, 32]
+3: [0, 54, 47, 6, 2, 53, 45, 1, 2, 0, 0, 1, 3, 0, 0, 1, 0, 0, 0, 1]
+4: [2, 1, 0, 0, 0, 1, 0, 2, 0, 0, 0, 52, 1, 1, 0, 62, 55, 0, 3, 3]
+5: [0, 2, 1, 0, 0, 0, 0, 1, 47, 1, 0, 0, 1, 54, 0, 0, 0, 0, 3, 0]
+
+Hierarchy Assignments:
+rec.sport.baseball: [63, 0, 0, 0, 0, 1] ==> 0
+talk.politics.misc: [49, 0, 1, 0, 3, 3] ==> 0
+rec.autos: [51, 2, 0, 1, 2, 1] ==> 0
+rec.sport.hockey: [59, 2, 0, 0, 0, 0] ==> 0
+sci.space: [0, 61, 0, 0, 0, 0] ==> 1
+comp.sys.ibm.pc.hardware: [1, 45, 0, 6, 0, 0] ==> 1
+sci.electronics: [2, 57, 0, 3, 1, 1] ==> 1
+comp.sys.mac.hardware: [0, 58, 0, 2, 0, 0] ==> 1
+alt.atheism: [0, 0, 59, 0, 2, 0] ==> 2
+talk.politics.mideast: [0, 0, 48, 0, 0, 0] ==> 2
+talk.religion.misc: [2, 1, 32, 1, 3, 0] ==> 2
+misc.forsale: [4, 4, 0, 45, 0, 0] ==> 3
+comp.os.ms-windows.misc: [0, 3, 0, 47, 0, 1] ==> 3
+comp.graphics: [0, 3, 0, 54, 1, 2] ==> 3
+comp.windows.x: [0, 3, 0, 53, 1, 0] ==> 3
+talk.politics.guns: [2, 1, 0, 0, 55, 0] ==> 4
+soc.religion.christian: [0, 1, 0, 1, 62, 0] ==> 4
+sci.crypt: [0, 1, 0, 1, 52, 0] ==> 4
+sci.med: [1, 4, 0, 0, 1, 54] ==> 5
+rec.motorcycles: [1, 1, 0, 2, 0, 47] ==> 5
+
+Keywords:
+0: ['edu' 'com' 'year' 'team' 'car']
+1: ['scsi' 'space' 'launch' 'edu' 'drive']
+2: ['god' 'israel' 'people' 'ra' 'edu']
+3: ['ax' 'max' '34u' '75u' 'a86']
+4: ['gun' 'edu' 'people' 'god' 'one']
+5: ['edu' 'com' 'b6' 'corn' 'one']
+
+
+Hierarchy #1
+Label Distributions:
+0: [0, 54, 7, 45, 59, 4, 1, 0, 0, 0, 1, 0, 9, 1, 0, 0, 1, 0, 0, 0]
+1: [1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 45, 0, 0, 2, 0, 0, 2, 0]
+2: [3, 2, 41, 2, 0, 1, 2, 1, 1, 0, 0, 1, 0, 54, 0, 0, 53, 0, 1, 33]
+3: [57, 0, 0, 1, 0, 0, 1, 0, 0, 62, 59, 0, 0, 1, 0, 0, 3, 0, 47, 1]
+4: [0, 1, 0, 2, 1, 1, 48, 54, 50, 0, 0, 0, 8, 0, 0, 1, 0, 0, 3, 2]
+5: [0, 3, 3, 1, 0, 50, 1, 2, 0, 1, 0, 53, 2, 4, 61, 61, 1, 48, 3, 3]
+
+Hierarchy Assignments:
+comp.sys.ibm.pc.hardware: [45, 1, 2, 1, 2, 1] ==> 0
+comp.sys.mac.hardware: [59, 0, 0, 0, 1, 0] ==> 0
+comp.graphics: [54, 0, 2, 0, 1, 3] ==> 0
+sci.electronics: [9, 45, 0, 0, 8, 2] ==> 1
+sci.med: [1, 0, 54, 1, 0, 4] ==> 2
+talk.politics.guns: [1, 0, 53, 3, 0, 1] ==> 2
+talk.religion.misc: [0, 0, 33, 1, 2, 3] ==> 2
+comp.os.ms-windows.misc: [7, 0, 41, 0, 0, 3] ==> 2
+rec.sport.baseball: [0, 1, 0, 62, 0, 1] ==> 3
+talk.politics.misc: [0, 2, 1, 47, 3, 3] ==> 3
+alt.atheism: [0, 1, 3, 57, 0, 0] ==> 3
+rec.sport.hockey: [1, 1, 0, 59, 0, 0] ==> 3
+misc.forsale: [1, 0, 2, 1, 48, 1] ==> 4
+rec.motorcycles: [0, 0, 1, 0, 50, 0] ==> 4
+rec.autos: [0, 0, 1, 0, 54, 2] ==> 4
+sci.space: [0, 0, 0, 0, 0, 61] ==> 5
+talk.politics.mideast: [0, 0, 0, 0, 0, 48] ==> 5
+soc.religion.christian: [0, 2, 0, 0, 1, 61] ==> 5
+sci.crypt: [0, 0, 1, 0, 0, 53] ==> 5
+comp.windows.x: [4, 1, 1, 0, 1, 50] ==> 5
+
+Keywords:
+0: ['scsi' 'mac' 'bit' '___' 'drive']
+1: ['scope' 'input' 'data' 'edu' 'power']
+2: ['ax' 'max' '34u' '75u' 'a86']
+3: ['edu' 'com' 'year' 'team' 'would']
+4: ['car' 'edu' 'com' 'sale' 'like']
+5: ['edu' 'space' 'launch' 'people' 'one']
+
+
+Hierarchy #2
+Label Distributions:
+0: [0, 6, 0, 2, 56, 49, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0]
+1: [3, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 0, 0, 59, 0, 48, 2, 35]
+2: [0, 2, 3, 1, 0, 3, 1, 1, 1, 1, 1, 53, 46, 57, 61, 2, 1, 0, 2, 1]
+3: [0, 4, 48, 47, 4, 3, 50, 53, 3, 2, 57, 1, 14, 1, 0, 1, 0, 0, 1, 1]
+4: [1, 47, 0, 2, 0, 2, 1, 1, 0, 61, 1, 0, 0, 2, 0, 1, 55, 0, 3, 2]
+5: [57, 0, 0, 0, 0, 0, 0, 1, 47, 0, 1, 0, 1, 0, 0, 0, 2, 0, 48, 0]
+
+Hierarchy Assignments:
+comp.sys.mac.hardware: [56, 0, 0, 4, 0, 0] ==> 0
+comp.windows.x: [49, 0, 3, 3, 2, 0] ==> 0
+talk.politics.mideast: [0, 48, 0, 0, 0, 0] ==> 1
+talk.religion.misc: [0, 35, 1, 1, 2, 0] ==> 1
+soc.religion.christian: [1, 59, 2, 1, 1, 0] ==> 1
+sci.med: [0, 0, 57, 1, 2, 0] ==> 2
+sci.space: [0, 0, 61, 0, 0, 0] ==> 2
+sci.electronics: [1, 2, 46, 14, 0, 1] ==> 2
+sci.crypt: [0, 0, 53, 1, 0, 0] ==> 2
+misc.forsale: [1, 0, 1, 50, 1, 0] ==> 3
+comp.sys.ibm.pc.hardware: [2, 0, 1, 47, 2, 0] ==> 3
+comp.os.ms-windows.misc: [0, 0, 3, 48, 0, 0] ==> 3
+rec.autos: [0, 1, 1, 53, 1, 1] ==> 3
+rec.sport.hockey: [1, 0, 1, 57, 1, 1] ==> 3
+rec.sport.baseball: [0, 0, 1, 2, 61, 0] ==> 4
+talk.politics.guns: [0, 0, 1, 0, 55, 2] ==> 4
+comp.graphics: [6, 1, 2, 4, 47, 0] ==> 4
+talk.politics.misc: [0, 2, 2, 1, 3, 48] ==> 5
+alt.atheism: [0, 3, 0, 0, 1, 57] ==> 5
+rec.motorcycles: [0, 0, 1, 3, 0, 47] ==> 5
+
+Keywords:
+0: ['window' 'edu' 'otis' 'apple' 'mac']
+1: ['god' 'people' 'israel' 'one' 'ra']
+2: ['edu' 'space' 'launch' 'com' 'information']
+3: ['ax' 'max' '34u' '75u' 'a86']
+4: ['gun' 'edu' '___' 'com' 'crime']
+5: ['edu' 'com' 'insurance' 'keith' 'writes']
+
+[63, 20200] train loss: (batch: 0.0017, discrete: 0.0012, continuous: 0.0005, gumbel: 2.9630, orth: 4.8857, mse: 0.5307), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0120
+[63, 20400] train loss: (batch: 0.0146, discrete: 0.0015, continuous: 0.0131, gumbel: 2.9726, orth: 4.8558, mse: 0.5080), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.3725
+[64, 20600] train loss: (batch: 0.0127, discrete: 0.0054, continuous: 0.0073, gumbel: 2.9739, orth: 4.8878, mse: 0.4416), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.4313
+[65, 20800] train loss: (batch: 0.0048, discrete: 0.0036, continuous: 0.0012, gumbel: 2.9792, orth: 4.8611, mse: 0.5014), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0375
+[65, 21000] train loss: (batch: 0.0019, discrete: 0.0013, continuous: 0.0006, gumbel: 2.9737, orth: 4.8670, mse: 0.5016), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0085
+[66, 21200] train loss: (batch: 0.0076, discrete: 0.0022, continuous: 0.0054, gumbel: 2.9541, orth: 4.8667, mse: 0.4823), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0773
+[67, 21400] train loss: (batch: 0.0019, discrete: 0.0012, continuous: 0.0007, gumbel: 2.9719, orth: 4.8632, mse: 0.5091), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0166
+[67, 21600] train loss: (batch: 0.0020, discrete: 0.0014, continuous: 0.0006, gumbel: 2.9709, orth: 4.8965, mse: 0.4979), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0327
+[68, 21800] train loss: (batch: 0.0017, discrete: 0.0013, continuous: 0.0004, gumbel: 2.9920, orth: 4.8933, mse: 0.5085), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0098
+[68, 22000] train loss: (batch: 0.4201, discrete: 0.2283, continuous: 0.1918, gumbel: 2.9749, orth: 4.9144, mse: 0.5132), discrete acc: 0.9688, continuous acc: 0.968750, grad_norm: 3.5384
+[69, 22200] train loss: (batch: 0.0015, discrete: 0.0011, continuous: 0.0005, gumbel: 2.9843, orth: 4.8805, mse: 0.5101), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0069
+[70, 22400] train loss: (batch: 0.0050, discrete: 0.0020, continuous: 0.0031, gumbel: 2.9761, orth: 4.9263, mse: 0.4735), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.2004
+[70, 22600] train loss: (batch: 0.0023, discrete: 0.0020, continuous: 0.0003, gumbel: 2.9875, orth: 4.9239, mse: 0.5174), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0072
+[71, 22800] train loss: (batch: 0.0029, discrete: 0.0013, continuous: 0.0016, gumbel: 2.9662, orth: 4.9753, mse: 0.5131), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0260
+[72, 23000] train loss: (batch: 0.0013, discrete: 0.0012, continuous: 0.0001, gumbel: 2.9902, orth: 4.9437, mse: 0.5564), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0036
+[72, 23200] train loss: (batch: 0.0020, discrete: 0.0010, continuous: 0.0009, gumbel: 2.9834, orth: 4.9336, mse: 0.5208), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0171
+[73, 23400] train loss: (batch: 0.0042, discrete: 0.0012, continuous: 0.0030, gumbel: 2.9817, orth: 4.9186, mse: 0.5043), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0465
+[73, 23600] train loss: (batch: 0.1793, discrete: 0.1783, continuous: 0.0011, gumbel: 2.9851, orth: 4.9552, mse: 0.4937), discrete acc: 0.9688, continuous acc: 1.000000, grad_norm: 1.0104
+[74, 23800] train loss: (batch: 0.0013, discrete: 0.0010, continuous: 0.0003, gumbel: 2.9781, orth: 4.9369, mse: 0.4964), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0058
+[75, 24000] train loss: (batch: 0.0013, discrete: 0.0010, continuous: 0.0003, gumbel: 2.9926, orth: 4.9394, mse: 0.4870), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0070
+[75, 24200] train loss: (batch: 0.0017, discrete: 0.0011, continuous: 0.0006, gumbel: 2.9939, orth: 4.9259, mse: 0.4379), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0103
+[76, 24400] train loss: (batch: 0.0029, discrete: 0.0018, continuous: 0.0011, gumbel: 2.9799, orth: 4.9396, mse: 0.4876), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0510
+[77, 24600] train loss: (batch: 0.0022, discrete: 0.0012, continuous: 0.0010, gumbel: 2.9836, orth: 4.8960, mse: 0.5179), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0183
+[77, 24800] train loss: (batch: 0.0622, discrete: 0.0010, continuous: 0.0611, gumbel: 2.9843, orth: 4.9457, mse: 0.4986), discrete acc: 1.0000, continuous acc: 0.968750, grad_norm: 0.9440
+[78, 25000] train loss: (batch: 0.0011, discrete: 0.0008, continuous: 0.0003, gumbel: 2.9940, orth: 4.9732, mse: 0.5204), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0075
+
+Hierarchy #0
+Label Distributions:
+0: [0, 1, 0, 0, 0, 0, 6, 52, 1, 62, 59, 0, 2, 0, 0, 0, 2, 0, 51, 1]
+1: [1, 2, 2, 47, 58, 2, 8, 2, 0, 0, 1, 0, 57, 3, 61, 1, 0, 0, 0, 2]
+2: [60, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 1, 33]
+3: [0, 55, 48, 4, 2, 55, 36, 0, 2, 0, 1, 0, 2, 0, 0, 0, 0, 0, 0, 0]
+4: [0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 53, 1, 0, 0, 63, 56, 0, 2, 3]
+5: [0, 2, 1, 0, 0, 0, 3, 2, 48, 1, 0, 1, 2, 57, 0, 0, 0, 0, 2, 0]
+
+Hierarchy Assignments:
+rec.sport.baseball: [62, 0, 0, 0, 1, 1] ==> 0
+talk.politics.misc: [51, 0, 1, 0, 2, 2] ==> 0
+rec.autos: [52, 2, 0, 0, 1, 2] ==> 0
+rec.sport.hockey: [59, 1, 0, 1, 0, 0] ==> 0
+sci.space: [0, 61, 0, 0, 0, 0] ==> 1
+comp.sys.ibm.pc.hardware: [0, 47, 0, 4, 1, 0] ==> 1
+sci.electronics: [2, 57, 0, 2, 1, 2] ==> 1
+comp.sys.mac.hardware: [0, 58, 0, 2, 0, 0] ==> 1
+alt.atheism: [0, 1, 60, 0, 0, 0] ==> 2
+talk.politics.mideast: [0, 0, 48, 0, 0, 0] ==> 2
+talk.religion.misc: [1, 2, 33, 0, 3, 0] ==> 2
+misc.forsale: [6, 8, 0, 36, 0, 3] ==> 3
+comp.os.ms-windows.misc: [0, 2, 0, 48, 0, 1] ==> 3
+comp.graphics: [1, 2, 0, 55, 0, 2] ==> 3
+comp.windows.x: [0, 2, 0, 55, 0, 0] ==> 3
+talk.politics.guns: [2, 0, 0, 0, 56, 0] ==> 4
+soc.religion.christian: [0, 1, 0, 0, 63, 0] ==> 4
+sci.crypt: [0, 0, 0, 0, 53, 1] ==> 4
+sci.med: [0, 3, 0, 0, 0, 57] ==> 5
+rec.motorcycles: [1, 0, 0, 2, 0, 48] ==> 5
+
+Keywords:
+0: ['edu' 'year' 'com' 'car' 'team']
+1: ['scsi' 'space' 'launch' 'edu' 'drive']
+2: ['god' 'israel' 'people' 'edu' 'ra']
+3: ['ax' 'max' '34u' '75u' 'a86']
+4: ['gun' 'edu' 'people' 'com' 'would']
+5: ['edu' 'com' 'one' 'b6' 'bike']
+
+
+Hierarchy #1
+Label Distributions:
+0: [0, 50, 1, 42, 57, 4, 1, 0, 0, 0, 1, 0, 6, 0, 0, 0, 0, 0, 0, 0]
+1: [1, 4, 1, 4, 1, 1, 2, 1, 0, 0, 1, 0, 52, 2, 0, 6, 0, 0, 0, 1]
+2: [3, 4, 47, 3, 1, 2, 1, 1, 1, 0, 0, 1, 1, 56, 0, 1, 56, 0, 3, 35]
+3: [57, 1, 0, 0, 0, 0, 1, 0, 1, 63, 59, 0, 1, 0, 0, 0, 2, 0, 50, 1]
+4: [0, 0, 0, 2, 1, 2, 47, 53, 49, 1, 0, 0, 4, 0, 0, 0, 0, 0, 1, 1]
+5: [0, 1, 2, 1, 0, 48, 1, 2, 0, 0, 0, 53, 0, 2, 61, 57, 0, 48, 2, 1]
+
+Hierarchy Assignments:
+comp.sys.ibm.pc.hardware: [42, 4, 3, 0, 2, 1] ==> 0
+comp.sys.mac.hardware: [57, 1, 1, 0, 1, 0] ==> 0
+comp.graphics: [50, 4, 4, 1, 0, 1] ==> 0
+sci.electronics: [6, 52, 1, 1, 4, 0] ==> 1
+sci.med: [0, 2, 56, 0, 0, 2] ==> 2
+talk.politics.guns: [0, 0, 56, 2, 0, 0] ==> 2
+talk.religion.misc: [0, 1, 35, 1, 1, 1] ==> 2
+comp.os.ms-windows.misc: [1, 1, 47, 0, 0, 2] ==> 2
+rec.sport.baseball: [0, 0, 0, 63, 1, 0] ==> 3
+talk.politics.misc: [0, 0, 3, 50, 1, 2] ==> 3
+alt.atheism: [0, 1, 3, 57, 0, 0] ==> 3
+rec.sport.hockey: [1, 1, 0, 59, 0, 0] ==> 3
+misc.forsale: [1, 2, 1, 1, 47, 1] ==> 4
+rec.motorcycles: [0, 0, 1, 1, 49, 0] ==> 4
+rec.autos: [0, 1, 1, 0, 53, 2] ==> 4
+sci.space: [0, 0, 0, 0, 0, 61] ==> 5
+talk.politics.mideast: [0, 0, 0, 0, 0, 48] ==> 5
+soc.religion.christian: [0, 6, 1, 0, 0, 57] ==> 5
+sci.crypt: [0, 0, 1, 0, 0, 53] ==> 5
+comp.windows.x: [4, 1, 2, 0, 2, 48] ==> 5
+
+Keywords:
+0: ['scsi' 'mac' 'bit' '___' 'drive']
+1: ['edu' 'scope' 'one' 'input' 'use']
+2: ['ax' 'max' '34u' '75u' 'a86']
+3: ['edu' 'year' 'team' 'com' 'would']
+4: ['car' 'edu' 'com' 'sale' 'one']
+5: ['edu' 'space' 'launch' 'people' 'one']
+
+
+Hierarchy #2
+Label Distributions:
+0: [0, 2, 2, 1, 55, 48, 1, 0, 0, 0, 1, 0, 2, 0, 0, 0, 0, 0, 0, 0]
+1: [3, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 60, 0, 48, 2, 35]
+2: [1, 4, 2, 4, 1, 2, 3, 3, 0, 0, 1, 54, 52, 60, 61, 2, 0, 0, 2, 1]
+3: [0, 4, 47, 45, 4, 5, 45, 52, 3, 2, 58, 0, 7, 0, 0, 0, 0, 0, 1, 1]
+4: [0, 50, 0, 2, 0, 2, 1, 0, 0, 61, 0, 0, 1, 0, 0, 2, 56, 0, 3, 2]
+5: [57, 0, 0, 0, 0, 0, 3, 1, 48, 1, 1, 0, 1, 0, 0, 0, 2, 0, 48, 0]
+
+Hierarchy Assignments:
+comp.sys.mac.hardware: [55, 0, 1, 4, 0, 0] ==> 0
+comp.windows.x: [48, 0, 2, 5, 2, 0] ==> 0
+talk.politics.mideast: [0, 48, 0, 0, 0, 0] ==> 1
+talk.religion.misc: [0, 35, 1, 1, 2, 0] ==> 1
+soc.religion.christian: [0, 60, 2, 0, 2, 0] ==> 1
+sci.med: [0, 0, 60, 0, 0, 0] ==> 2
+sci.space: [0, 0, 61, 0, 0, 0] ==> 2
+sci.electronics: [2, 1, 52, 7, 1, 1] ==> 2
+sci.crypt: [0, 0, 54, 0, 0, 0] ==> 2
+misc.forsale: [1, 0, 3, 45, 1, 3] ==> 3
+comp.sys.ibm.pc.hardware: [1, 0, 4, 45, 2, 0] ==> 3
+comp.os.ms-windows.misc: [2, 0, 2, 47, 0, 0] ==> 3
+rec.autos: [0, 1, 3, 52, 0, 1] ==> 3
+rec.sport.hockey: [1, 0, 1, 58, 0, 1] ==> 3
+rec.sport.baseball: [0, 0, 0, 2, 61, 1] ==> 4
+talk.politics.guns: [0, 0, 0, 0, 56, 2] ==> 4
+comp.graphics: [2, 0, 4, 4, 50, 0] ==> 4
+talk.politics.misc: [0, 2, 2, 1, 3, 48] ==> 5
+alt.atheism: [0, 3, 1, 0, 0, 57] ==> 5
+rec.motorcycles: [0, 0, 0, 3, 0, 48] ==> 5
+
+Keywords:
+0: ['window' 'edu' 'apple' 'mac' 'com']
+1: ['god' 'israel' 'people' 'ra' 'one']
+2: ['edu' 'space' 'launch' 'com' 'one']
+3: ['ax' 'max' '34u' '75u' 'a86']
+4: ['gun' 'edu' '___' 'com' 'crime']
+5: ['edu' 'com' 'insurance' 'health' 'writes']
+
+[78, 25200] train loss: (batch: 0.0024, discrete: 0.0010, continuous: 0.0015, gumbel: 2.9786, orth: 5.0274, mse: 0.4725), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0220
+[79, 25400] train loss: (batch: 0.0013, discrete: 0.0011, continuous: 0.0002, gumbel: 2.9916, orth: 5.0030, mse: 0.4929), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0057
+[80, 25600] train loss: (batch: 0.0017, discrete: 0.0013, continuous: 0.0005, gumbel: 2.9865, orth: 5.0042, mse: 0.4835), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0116
+[80, 25800] train loss: (batch: 0.0015, discrete: 0.0010, continuous: 0.0004, gumbel: 2.9954, orth: 4.9986, mse: 0.5169), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0085
+[81, 26000] train loss: (batch: 0.0012, discrete: 0.0009, continuous: 0.0003, gumbel: 2.9862, orth: 5.0140, mse: 0.4744), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0076
+[82, 26200] train loss: (batch: 0.0015, discrete: 0.0009, continuous: 0.0006, gumbel: 2.9947, orth: 5.0025, mse: 0.4940), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0102
+[82, 26400] train loss: (batch: 0.0008, discrete: 0.0008, continuous: 0.0000, gumbel: 2.9776, orth: 5.0081, mse: 0.5297), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0023
+[83, 26600] train loss: (batch: 0.0013, discrete: 0.0012, continuous: 0.0001, gumbel: 2.9902, orth: 4.9717, mse: 0.5901), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0043
+[84, 26800] train loss: (batch: 0.0012, discrete: 0.0011, continuous: 0.0001, gumbel: 2.9890, orth: 5.0008, mse: 0.5335), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0037
+[84, 27000] train loss: (batch: 0.0012, discrete: 0.0010, continuous: 0.0002, gumbel: 2.9810, orth: 5.0127, mse: 0.5380), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0064
+[85, 27200] train loss: (batch: 0.0017, discrete: 0.0016, continuous: 0.0001, gumbel: 2.9802, orth: 4.9827, mse: 0.5346), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0060
+[85, 27400] train loss: (batch: 0.0018, discrete: 0.0010, continuous: 0.0008, gumbel: 2.9872, orth: 4.9539, mse: 0.5271), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0236
+[86, 27600] train loss: (batch: 0.0032, discrete: 0.0010, continuous: 0.0022, gumbel: 2.9949, orth: 4.9473, mse: 0.5400), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0524
+[87, 27800] train loss: (batch: 0.0010, discrete: 0.0008, continuous: 0.0001, gumbel: 2.9801, orth: 4.9378, mse: 0.5047), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0036
+[87, 28000] train loss: (batch: 0.0016, discrete: 0.0009, continuous: 0.0007, gumbel: 2.9770, orth: 4.8868, mse: 0.5295), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.0138
+[88, 28200] train loss: (batch: 0.0048, discrete: 0.0047, continuous: 0.0001, gumbel: 2.9779, orth: 4.9182, mse: 0.5449), discrete acc: 1.0000, continuous acc: 1.000000, grad_norm: 0.2751
